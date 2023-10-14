@@ -1,0 +1,317 @@
+import time
+
+age_ = int(input("How old are you?"))
+
+gender_ = str(input("Are you a male or female?"))
+
+if gender_ == "female" or "girl":
+    pass
+#str("girl") == str("female")
+if gender_ == "male" or "boy":
+    pass
+
+
+
+if age_ == 1:
+    print("You are a " + str(gender_) + " infant!")
+    pass
+
+if (age_ >= 2 and age_ <= 3):
+    print("You are a " + str(gender_) + " toddler!")
+
+if (age_ >= 4 and age_ <= 11):
+    print("You are a " + str(gender_) + " child!")
+
+if (age_ >= 12 and age_ <= 17):
+    print("You are a " + str(gender_) + " young adult!")
+
+if (age_ >= 18 and age_ <= 64):
+    print("You are an adult " + str(gender_) + "!")
+
+if (age_ >= 65 and age_ <= 99):
+    print("You are a " + str(gender_) + " senior!")
+
+if not (age_ < 100):
+    print("How are you still alive?")
+    exit()
+
+for seconds in range(1, 4, 1):
+    time.sleep(1)
+
+weight_input = int(input("How much do you weigh?"))
+
+#INFANTUNDERWEIGHT
+if gender_ == "female":
+    if age_ == 1:
+        if not (weight_input > 3):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " toddler!")
+            exit()
+
+if gender_ == "male":
+    if age_ == 1:
+        if not (weight_input > 4):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " toddler!")
+            exit()
+
+
+#INFANTNORMAL WEIGHT
+if gender_ == "female":
+    if age_ == 1:
+        if weight_input >= 4 and weight_input <= 6:
+            print("You are weight is normal at " + str(weight_input) + \
+                    " pounds as a " + str(gender_) + " infant!")
+            exit()
+
+if gender_ == "male":
+    if age_ == 1:
+        if weight_input >= 5 and weight_input <= 8:
+            print("You are weight is normal at " + str(weight_input) + \
+                " pounds as a " + str(gender_) + " infant!")
+            exit()
+
+#INFANTOVERWEIGHT
+if gender_ == "female":
+    if age_ == 1:
+        if not (weight_input < 7):
+            print("You are overweight as a " + str(gender_) + \
+                  " infant at " + str(weight_input) + ' Pounds!')
+            exit()
+
+if gender_ == "male":
+    if age_ == 1:
+        if not (weight_input < 9):
+            print("You are overweight as a " + str(gender_) + \
+                  " infant at " + str(weight_input) + ' Pounds!')
+            exit()
+
+#TODDLERUNDERWEIGHT
+if gender_ == "female":
+    if (age_ >= 2 and age_ <= 3):
+        if not (weight_input > 21):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " toddler!")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 2 and age_ <= 3):
+        if not (weight_input > 23):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " toddler!")
+            exit()
+
+#TODDLERNORMAL WEIGHT
+if gender_ == "female":
+    if (age_ >= 2 and age_ <= 3):
+        if weight_input >= 22 and weight_input <= 24:
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " Toddler!")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 2 and age_ <= 3):
+        if (weight_input >= 24 and weight_input <= 28):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " Toddler")
+            exit()
+
+#TODDLEROVERWEIGHT
+if gender_ == "male":
+    if not (weight_input < 29):
+        if (age_ >= 2 and age_ <= 3):
+            print("You are overweight as a " + str(gender_) + \
+                  " toddler at " + str(weight_input) + ' Pounds!')
+            exit()
+if gender_ == "female":
+    if not (weight_input < 25):
+        if (age_ >= 2 and age_ <= 3):
+            print("You are overweight as a " + str(gender_) + \
+                  " toddler at " + str(weight_input) + ' Pounds!')
+            exit()
+
+
+
+#CHILD UNDERWEIGHT
+
+if gender_ == "female":
+    if (age_ >= 4 and age_ <= 11):
+        if not (weight_input > 39):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " child!")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 4 and age_ <= 11):
+        if not (weight_input > 45):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " child!")
+            exit()
+
+#CHILD NORMAL WEIGHT
+if gender_ == "female":
+    if (weight_input >= 40 and weight_input <= 50):
+        print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " child")
+        exit()
+
+if gender_ == "male":
+    if (weight_input >= 46 and weight_input <= 55):
+        print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " child")
+        exit()
+
+#CHILD OVER WEIGHT
+if gender_ == "female":
+    if not (weight_input < 51):
+        if (age_ >= 4 and age_ <= 11):
+            print("You are overweight as a " + str(gender_) + \
+                  " child at " + str(weight_input) + ' Pounds!')
+            exit()
+
+if gender_ == "male":
+    if not (weight_input < 56):
+        if (age_ >= 4 and age_ <= 11):
+            print("You are overweight as a " + str(gender_) + \
+                  " child at " + str(weight_input) + ' Pounds!')
+            exit()
+
+#YOUNGAD UNDERWEIGHT
+if gender_ == "female":
+    if (age_ >= 12 and age_ <= 17):
+        if not (weight_input > 100):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " young adult!")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 12 and age_ <= 17):
+        if not (weight_input > 110):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " young adult!")
+            exit()
+
+#YOUNGAD NORMAL WEIGHT
+if gender_ == "female":
+    if (weight_input >= 101 and weight_input <= 170):
+        if (age_ >= 12 and age_ <= 17):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " young adult")
+            exit()
+
+if gender_ == "male":
+    if (weight_input >= 111 and weight_input <= 189):
+        if (age_ >= 12 and age_ <= 17):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " young adult")
+            exit()
+
+#YOUNGAD OVER WEIGHT
+if gender_ == "female":
+    if not (weight_input < 171):
+        if (age_ >= 12 and age_ <= 17):
+            print("You are overweight as a " + str(gender_) + \
+                  " young adult at " + str(weight_input) + ' Pounds!')
+            exit()
+
+if gender_ == "male":
+    if not (weight_input < 190):
+        if (age_ >= 12 and age_ <= 17):
+            print("You are overweight as a " + str(gender_) + \
+                  " young adult at " + str(weight_input) + ' Pounds!')
+            exit()
+
+#ADULT UNDERWEIGHT
+
+if gender_ == "female":
+    if (age_ >= 18 and age_ <= 64):
+        if not (weight_input > 170):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " adult!")
+            exit()
+
+
+if gender_ == "male":
+    if (age_ >= 18 and age_ <= 64):
+        if not (weight_input > 180):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " adult!")
+            exit()
+
+#ADULT NORMAL WEIGHT
+if gender_ == "female":
+    if (age_ >= 18 and age_ <= 64):
+        if (weight_input >= 171 and weight_input <= 190):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " adult")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 18 and age_ <= 64):
+        if (weight_input >= 181 and weight_input <= 220):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " adult")
+            exit()
+
+#ADULT OVER WEIGHT
+if gender_ == "female":
+    if not (weight_input <= 191):
+        if (age_ >= 18 and age_ <= 64):
+            print("You are overweight as a " + str(gender_) + \
+                  " adult at " + str(weight_input) + ' Pounds!')
+            exit()
+
+if gender_ == "male":
+    if not (weight_input <= 221):
+        if (age_ >= 18 and age_ <= 64):
+            print("You are overweight as a " + str(gender_) + \
+                  " adult at " + str(weight_input) + ' Pounds!')
+            exit()
+
+#SENIOR UNDERWEIGHT
+
+if gender_ == "female":
+    if (age_ >= 65 and age_ <= 99):
+        if not (weight_input > 150):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " senior!")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 65 and age_ <= 99):
+        if not (weight_input > 170):
+            print(str(weight_input) + " Pounds, is too low for your age as a "\
+                  + str(gender_) + " senior!")
+            exit()
+
+#SENIOR NORMAL WEIGHT
+
+if gender_ == "female":
+    if (age_ >= 65 and age_ <= 99):
+        if (weight_input >= 151 and weight_input <= 170):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " senior")
+            exit()
+
+if gender_ == "male":
+    if (age_ >= 65 and age_ <= 99):
+        if (weight_input >= 171 and weight_input <= 189):
+            print("You are weight is normal at " + str(weight_input) + \
+            " pounds as a " + str(gender_) + " senior")
+            exit()
+
+#SENIOR OVER WEIGHT
+
+if gender_ == "female":
+    if not (weight_input < 171):
+        if not (age_ < 65):
+            print("You are overweight as a " + str(gender_) + \
+                  " senior at " + str(weight_input) + ' Pounds!')
+            exit()
+
+if gender_ == "male":
+    if not (weight_input < 190):
+        if not (age_ < 65):
+            print("You are overweight as a " + str(gender_) + \
+                  " senior at " + str(weight_input) + ' Pounds!')
+            exit()
